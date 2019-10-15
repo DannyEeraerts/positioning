@@ -37,23 +37,22 @@ h2 {
     font-size: 1.25em;
 }
 #first{
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
     margin-bottom: 2.75em;
     column-gap: 2em;
 }
+#first div:nth-child(1){
+    grid-column-start: 3;
+}
 #second{
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
     margin-bottom: 3em;
     column-gap: 1em;
 }
-#first div{
-    flex-basis: 17.5%;
+#second div:nth-child(1){
+    grid-column-start: 2;
 }
 #first p{
     font-size: 0.75em;
@@ -81,7 +80,7 @@ footer{
     background: var(--text-color-dark);
     height: 7em;
 }
-@media only screen and (max-width: 1500px) {
+/* @media only screen and (max-width: 1500px) {
     #first{
         margin: 0 3em 2.75 3em;
     }
@@ -126,4 +125,4 @@ footer{
         flex-basis: 35%;
         margin-bottom: 2em;
     }  
-}
+} */
