@@ -37,27 +37,28 @@ h2 {
     font-size: 1.25em;
 }
 #first{
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
     margin-bottom: 2.75em;
     column-gap: 2em;
 }
-#first div:nth-child(1){
-    grid-column-start: 3;
-}
 #second{
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
     margin-bottom: 3em;
     column-gap: 1em;
 }
-#second div:nth-child(1){
-    grid-column-start: 2;
+#first div{
+    flex-basis: 17.5%;
 }
 #first p{
     font-size: 0.75em;
     line-height: 1.25em;
-    margin: 0 1.5em
+    margin: 0 1.5em;
 }
 #first img{
     width: 25rem;
@@ -80,7 +81,7 @@ footer{
     background: var(--text-color-dark);
     height: 7em;
 }
-/* @media only screen and (max-width: 1500px) {
+@media only screen and (max-width: 1500px) {
     #first{
         margin: 0 3em 2.75 3em;
     }
@@ -88,7 +89,7 @@ footer{
         flex-basis: 35%;
         column-gap: O;
     }
-    #first div:nth-of-type(12){  
+    #first div:nth-of-type(2){  
         flex-basis: 17,5%;
     }
     #second div{
@@ -125,4 +126,4 @@ footer{
         flex-basis: 35%;
         margin-bottom: 2em;
     }  
-} */
+}
